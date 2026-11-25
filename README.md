@@ -20,7 +20,6 @@ This version retains the original HTML/CSS pages and replaces Firebase + browser
 - Admin: `admin` / `admin123`
 - Sample students: `student001` through `student040`, password `student123`
 
-Change demo passwords before any public deployment. This is a class/demo project; API authorization and deployment hardening are not production-ready.
 
 ## Tables and relationships
 - `users` — account records
@@ -30,7 +29,7 @@ Change demo passwords before any public deployment. This is a class/demo project
 - `order_items` — line items, order/menu FKs and quantity/price checks
 - `feedback` — user feedback, rating check
 
-The seed script creates 40 sample records in each main table (and one extra admin user). The sample data is for demonstration; do not use it as real operational data.
+The seed script creates 40 sample records in each main table (and one extra admin user). The sample data is for demonstration;
 
 ## Required SQL demonstration
 Run `database/required_queries.sql` after seeding. It includes a multi-table JOIN, GROUP BY/HAVING, subquery, view, transaction example, constraint test, and status sales aggregate. The constraint test is intentionally invalid and should return an error for a rating of 6.
