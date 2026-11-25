@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canteen Hub - Menu</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body style="padding-bottom: 120px;">
+
+<div style="width:100%; max-width:1200px; margin: 20px 0; display:flex; justify-content:space-between; align-items:center;">
+    <h2 style="margin-bottom:0;">🍽️ PSU Canteen Menu</h2>
+    <a href="orders.html" style="background:white; padding:10px 20px; border-radius:10px; box-shadow:var(--shadow-sm); color:var(--text-main); text-decoration:none; font-weight:600; font-size:14px; border:1px solid var(--border);">📦 View My Orders</a>
+</div>
+
+<div id="menuList" class="menu-grid"></div>
+
+<div id="feedbackSection" class="container" style="max-width:1200px; text-align:left;">
+    <h3>⭐ Rate Our Food Quality</h3>
+    <p style="color: var(--text-muted); font-size:14px; margin-top:-5px;">Let us know how your food was today!</p>
+
+    <div style="display:flex; gap:20px; align-items:center; margin-bottom:15px;">
+        <div style="width:180px;">
+            <label for="rating" style="font-size:13px; font-weight:600;">Rating Metric (1-5):</label>
+            <input type="number" id="rating" min="1" max="5" placeholder="5" style="margin-bottom:0;">
+        </div>
+        <div style="flex:1;">
+            <label for="comment" style="font-size:13px; font-weight:600;">Comments / Instructions:</label>
+            <textarea id="comment" placeholder="Write your feedback reviews here..." style="margin-bottom:0; height:46px; padding:10px;"></textarea>
+        </div>
+        <button class="submit-feedback-btn" onclick="submitFeedback()" style="width:200px; margin-top:18px;">Submit Review</button>
+    </div>
+</div>
+
+<div class="sticky-checkout-bar">
+    <div class="checkout-inner">
+        <div class="checkout-stats">
+            <div class="stat-unit">
+                <h5>Cart Total Balance</h5>
+                <p>₱<span id="totalPrice">0</span></p>
+            </div>
+        </div>
+
+        <div class="checkout-inputs">
+            <div>
+                <input type="time" id="time" required>
+            </div>
+<div class="checkout-form-group" style="margin-bottom: 15px;">
+    <label for="customerName" style="display: block; font-size: 14px; font-weight: 600; margin-bottom: 5px; color: var(--text-main);">
+        👤 Full Name / Identifier:
+    </label>
+    <input type="text" id="customerName" placeholder="Enter your name for pickup" 
+           style="width: 100%; padding: 10px; border: 1px solid var(--border); border-radius: 6px; font-size: 14px;">
+</div>
+            <div class="payment-pill-box">
+                <label class="payment-pill">
+                    <input type="radio" name="payment" value="Cash on Pickup" checked>
+                    <span>💵 Cash</span>
+                </label>
+                <label class="payment-pill">
+                    <input type="radio" name="payment" value="GCash">
+                    <span>💙 GCash</span>
+                </label>
+                <label class="payment-pill">
+                    <input type="radio" name="payment" value="PayMaya">
+                    <span>💚 Maya</span>
+                </label>
+            </div>
+
+            <button id="placeOrderBtn" onclick="placeOrder()">Confirm Order 🚀</button>
+        </div>
+    </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>

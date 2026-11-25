@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canteen Admin</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="admin-max-view">
+    <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:20px;">
+        <h2 style="margin:0;">👑 Canteen Admin</h2>
+        <a href="index.html" style="font-size:14px; color:var(--text-muted); font-weight:600;">Logout Panel</a>
+    </div>
+
+    <div class="stats-container">
+        <div class="stat-card">
+            <h4>Gross Total Turnover Revenue</h4>
+            <p id="totalSales">₱0</p>
+        </div>
+        <div class="stat-card">
+            <h4>Total Processing Tickets</h4>
+            <p id="totalOrdersCount">0</p>
+        </div>
+    </div>
+
+    <div class="admin-main-layout">
+        <div class="admin-col-left">
+            <div class="container" style="max-width:100%; text-align:left; padding:25px;">
+                <h3 style="margin-bottom:20px;">✨ Provision New Food Item</h3>
+                <label style="font-size:12px; font-weight:600;">Food Item Title</label>
+                <input type="text" id="foodName" placeholder="e.g., Crispy Chicken Fillet">
+                
+                <label style="font-size:12px; font-weight:600;">Unit Selling Price (₱)</label>
+                <input type="number" id="foodPrice" placeholder="Price value">
+                
+                <label style="font-size:12px; font-weight:600;">Available Stock Allocation</label>
+                <input type="number" id="foodStock" placeholder="Quantity units">
+                
+                <button onclick="addMenu()">Publish to Live Canteen</button>
+            </div>
+
+            <h3>Inventory Management List</h3>
+            <div id="adminMenu"></div>
+        </div>
+
+        <div class="admin-col-right">
+            <h3>📋 Active Kitchen Processing Queues</h3>
+            <div id="adminOrders"></div>
+
+            <div class="feedback-box-area" style="margin-top:40px;">
+                <button id="toggleFeedbackBtn" onclick="toggleFeedbacks()" style="background: #4a90e2; box-shadow:none;">View Customer Feedbacks 💬</button>
+                <div id="adminFeedbackSection" class="hidden" style="margin-top:20px;">
+                    <div id="feedbackList"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
