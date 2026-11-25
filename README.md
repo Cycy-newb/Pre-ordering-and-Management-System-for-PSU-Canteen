@@ -1,7 +1,5 @@
 # PSU Canteen Ordering System — MySQL Upgrade
 
-This version retains the original HTML/CSS pages and replaces Firebase + browser Local Storage application data with a Node/Express backend and MySQL.
-
 ## Stack
 - Frontend: existing HTML, CSS, vanilla JS
 - Backend: Node.js + Express
